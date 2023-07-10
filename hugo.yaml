@@ -31,22 +31,25 @@ params:
     # Note from https://github.com/adityatelange/hugo-PaperMod/issues/702 that post must have date to be archived
     ShowAllPagesInArchive: true
 
+    homeInfoParams:
+    Title: "Dimas Wahyu Saputro"
+    Content: "Data Enthusiast"
 
-    profileMode:
-        enabled: true
-        title: "Dimas Wahyu Saputro" # optional default will be site title
-        subtitle: "Data Enthusiast"
-        imageUrl: "/me.jpg" # optional
-        imageTitle: "Picture of me" # optional
-        imageWidth: 150 # custom size
-        imageHeight: 150 # custom size
-        buttons:
-            - name: Posts
-              url: /posts
-            - name: Portfolio
-              url: "/portfolio"
-            - name: More
-              url: "/about"
+    # profileMode:
+    #     enabled: true
+    #     title: "Dimas Wahyu Saputro" # optional default will be site title
+    #     subtitle: "Data Enthusiast"
+    #     imageUrl: "/me.jpg" # optional
+    #     imageTitle: "Picture of me" # optional
+    #     imageWidth: 150 # custom size
+    #     imageHeight: 150 # custom size
+    #     buttons:
+    #         - name: Posts
+    #           url: /posts
+    #         - name: Portfolio
+    #           url: "/portfolio"
+    #         - name: More
+    #           url: "/about"
 
     socialIcons: # optional
         - name: github
