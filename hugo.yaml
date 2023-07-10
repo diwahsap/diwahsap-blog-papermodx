@@ -32,32 +32,14 @@ params:
     ShowAllPagesInArchive: true
 
     homeInfoParams:
-    Title: "Dimas Wahyu Saputro"
-    Content: "Data Enthusiast"
-
-    # profileMode:
-    #     enabled: true
-    #     title: "Dimas Wahyu Saputro" # optional default will be site title
-    #     subtitle: "Data Enthusiast"
-    #     imageUrl: "/me.jpg" # optional
-    #     imageTitle: "Picture of me" # optional
-    #     imageWidth: 150 # custom size
-    #     imageHeight: 150 # custom size
-    #     buttons:
-    #         - name: Posts
-    #           url: /posts
-    #         - name: Portfolio
-    #           url: "/portfolio"
-    #         - name: More
-    #           url: "/about"
+        Title: Hi there wave
+        Content: Can be Info, links, about...
 
     socialIcons: # optional
-        - name: github
-          url: "https://github.com/diwahsap"
-        - name: linkedin
-          url: "https://www.linkedin.com/in/dimasws/"
-        - name: email
-          url: "mailto:dim.mas.ws@gmail.com"
+        - name: "<platform>"
+          url: "<link>"
+        - name: "<platform 2>"
+          url: "<link2>"
 
 menu:
   main:
