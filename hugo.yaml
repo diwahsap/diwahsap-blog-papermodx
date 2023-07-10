@@ -1,115 +1,110 @@
-title: PaperModX Example Site
-baseURL: "https://reorx.github.io/papermodx-example/"
+baseURL: "https://diwahsap.github.io/"
+languageCode: en-us
+title: Dim's Notes
 theme: PaperModX
 
-enableRobotsTXT: true
-enableEmoji: true
-
 params:
-  description: "PaperModX Example Site description"
-  author: Reorx
-  images:
-    - cover.png
-  favicon: favicon.ico
-  #logo:
-  #  icon: images/logo.svg
-  DateFormat: "2006-01-02"
-  useCustomAnalytics: true
-  mainSections:
-    - posts
-    - notes
+    ShowReadingTime: true
+    ShowShareButtons: false
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowWordCount: false
+    ShowRssButtonInSectionTermList: false
+    # See markup.tableOfContents for configuration
+    UseHugoToc: true
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    # See https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#comments
+    comments: true
+    hidemeta: false
+    hideSummary: false
+    showtoc: true
+    tocopen: true
+    # New, from PaperModX
+    TocSide: left
+    # Enable KaTeX on every page globally. See blog post about setting up site
+    math: true
+    # Without this, archive doesn't show all pages
+    # See https://github.com/adityatelange/hugo-PaperMod/issues/912
+    # And https://github.com/adityatelange/hugo-PaperMod/commit/fc87fc3a29e8e515dff866159601a734e3ad4a2f
+    # Note from https://github.com/adityatelange/hugo-PaperMod/issues/702 that post must have date to be archived
+    ShowAllPagesInArchive: true
 
-  # theme params
-  DisableLanguageSwitch: true
-  TocOpen: true
-  TocSide: right
-  EnableInstantClick: false
-  EnableImageZoom: true
-  ShowShareButtons: true
-  ShareButtons:
-    - twitter
-    - telegram
-  ShowReadingTime: true
-  ShowWordCount: true
-  ShowCodeCopyButtons: true
-  ShowPostNavLinks: true
-  Email: hello@example.com
 
-  socialIcons:
-    - name: github-simple
-      url: "https://github.com/reorx"
-    - name: twitter-simple
-      url: "https://twitter.com/novoreorx"
-    - name: telegram-simple
-      url: "https://t.me/reorx_share"
-    - name: rss-simple
-      url: "feed.xml"
-    - name: gmail
-      url: email
+    profileMode:
+        enabled: true
+        title: "Dimas Wahyu Saputro" # optional default will be site title
+        subtitle: "Data Enthusiast"
+        imageUrl: "/me.jpg" # optional
+        imageTitle: "Picture of me" # optional
+        imageWidth: 150 # custom size
+        imageHeight: 150 # custom size
+        buttons:
+            - name: Posts
+              url: /posts
+            - name: Portfolio
+              url: "/portfolio"
+            - name: More
+              url: "/about"
 
-  socialAccounts:
-    twitter:
-      username: novoreorx
-
-  homeInfoParams:
-    Title: "PaperModX"
-    Content: |
-      Welcome to demo of hugo's theme PaperModX.
-
-      - **PaperModX** is a simple but fast and responsive theme with useful feature-set that enhances UX.
-
-      - PaperModX is based on theme [PaperMod](https://github.com/adityatelange/hugo-PaperMod).
-
-      To get started, please head to the [Docs](docs).
-
-      To see examples of different contents, head to [examples tag](tags/example).
-
-  #commentSystems:
-  #  disqus:
-  #    shortname: reorx
-  #  remark42:
-  #    url: https://remark42.reorx.com
-  #    site: reorx.github.io
-  #  telegramWidget:
-  #    channel: reorx_share
-  #    accentColor: "9077e1"
-  #    limit: 20
-  #defaultCommentSystems:
-  #  remark42: true
-
-permalinks:
-  notes: /:section/:year/:month/:slugorfilename
-
-# prefer feed.xml rather than index.xml
-outputFormats:
-  RSS:
-    mediatype: "application/rss"
-    baseName: "feed"
+    socialIcons: # optional
+        - name: github
+          url: "https://github.com/diwahsap"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/dimasws/"
+        - name: email
+          url: "mailto:dim.mas.ws@gmail.com"
 
 menu:
   main:
-    - name: Posts
-      url: /posts/
+    - identifier: about
+      name: About
+      url: /about/
       weight: 1
-    - name: Notes
-      url: /notes/
+    - identifier: projects
+      name: Projects
+      url: /projects/
       weight: 2
-    - name: Newsletter
-      url: /newsletter/
+    - identifier: teaching
+      name: Teaching
+      url: /teaching/
       weight: 3
-    - name: Archives
-      url: /archives/
+    - identifier: search
+      name: Search
+      url: /search/
       weight: 4
 
-languages:
-  en:
-    languageName: "English"
 
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+# Source: https://gohugo.io/getting-started/configuration-markup/#highlight
+# Parameter meanings: https://gohugo.io/functions/highlight/
 markup:
-  goldmark:
-    renderer:
-      unsafe: true
+  tableOfContents:
+    # Without this, Hugo ToC doesn't show h4 and higher
+    # https://github.com/alex-shpak/hugo-book/issues/52
+    endLevel: 6
+
   highlight:
-    style: dracula
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: true
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    # highlight.js also doesn't use line numbers by default.
+    # The rationale is that doing so improves readability
+    # (https://highlightjs.readthedocs.io/en/latest/line-numbers.html).
+    # Therefore, I disable it by default.
+    # Note: It's possible to enable it on a specific code block by specifying
+    # ``` {lineNos=true}
+    # ```
     lineNos: false
+    lineNumbersInTable: true
+    # false means use external CSS file
     noClasses: false
+    noHl: false
+    # style: monokai
+    tabWidth: 4
