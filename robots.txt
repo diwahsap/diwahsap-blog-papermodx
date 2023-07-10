@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://diwahsap.github.io/sitemap.xml
