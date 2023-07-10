@@ -1,7 +1,5 @@
-baseURL: "https://diwahsap.github.io/"
-languageCode: en-us
-title: Dim's Notes
 title: PaperModX Example Site
+baseURL: "https://reorx.github.io/papermodx-example/"
 theme: PaperModX
 
 enableRobotsTXT: true
@@ -65,6 +63,28 @@ params:
       To get started, please head to the [Docs](docs).
 
       To see examples of different contents, head to [examples tag](tags/example).
+
+  #commentSystems:
+  #  disqus:
+  #    shortname: reorx
+  #  remark42:
+  #    url: https://remark42.reorx.com
+  #    site: reorx.github.io
+  #  telegramWidget:
+  #    channel: reorx_share
+  #    accentColor: "9077e1"
+  #    limit: 20
+  #defaultCommentSystems:
+  #  remark42: true
+
+permalinks:
+  notes: /:section/:year/:month/:slugorfilename
+
+# prefer feed.xml rather than index.xml
+outputFormats:
+  RSS:
+    mediatype: "application/rss"
+    baseName: "feed"
 
 menu:
   main:
